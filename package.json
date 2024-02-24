@@ -1,0 +1,23 @@
+{
+  "name": "pullwatch",
+  "version": "1.0.0",
+  "description": "Script para monitorar pull requests em repositórios do GitHub",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonmalves/pullwatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andersonmalves/pullwatch/issues"
+  },
+  "homepage": "https://github.com/andersonmalves/pullwatch#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
