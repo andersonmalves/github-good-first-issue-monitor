@@ -6,6 +6,7 @@ Este é um projeto simples desenvolvido em Node.js que monitora repositórios do
 
 - Verifica regularmente repositórios específicos em busca de novas issues marcadas como "good-first-issue".
 - Registra as issues encontradas para garantir que apenas as novas issues sejam contabilizadas para fazer a notificação.
+- Envia email com as issues encontradas.
 - Salva logs da execução do monitor em um arquivo.
 
 ### Uso
@@ -42,6 +43,10 @@ const repositories = [
     // Adicione mais repositórios conforme necessário
 ];
 ```
+
+Você precisa criar uma senha aplicativo e configurar os secrets para enviar os emails. Mais informações:
+- https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email
+- https://docs.github.com/pt/actions/security-guides/using-secrets-in-github-actions
 
 ### Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue se encontrar algum problema ou tiver alguma sugestão de melhoria.
