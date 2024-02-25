@@ -1,6 +1,7 @@
 import { repositories } from './utils/repositories.js';
 import { getOpenPullRequests } from './utils/github.js';
 import { readStoredIssues, writeStoredIssues } from './utils/storage.js';
+import { saveLogs } from './utils/logs.js';
 
 async function checkGoodFirstIssues() {
     const storedIssues = await readStoredIssues();
@@ -15,11 +16,12 @@ async function checkGoodFirstIssues() {
             newIssues.forEach(issue => {
                 console.log(`- ${issue.title} (${issue.html_url})`);
         });
-            
-            console.log(`achamos algo novo!`);
+            // console.log(`achamos algo novo!`);
+            saveLogs(`Novas pull requests encontradas em ${repo}`);
             storedIssues.push(...newIssues.map(issue => issue.id));
         } else {
             console.log(`Nenhuma good first issue nova em ${repo}.`);
+            saveLogs(`Nenhuma nova pull request em ${repo}`);
         }
     }
 
@@ -28,5 +30,6 @@ async function checkGoodFirstIssues() {
 
 checkGoodFirstIssues().catch(error => {
     error('Ocorreu um erro durante o monitoramento:', error);
+    saveLogs(`Erro: ${error.message}`);
     process.exit(1);
 });
