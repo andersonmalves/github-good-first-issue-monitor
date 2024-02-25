@@ -22,3 +22,9 @@ jobs:
 
       - name: Run script
         run: node monitor.js
+        
+      - name: Upload logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: logs
+          path: logs.txt
