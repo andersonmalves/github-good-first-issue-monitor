@@ -1,6 +1,7 @@
 {
   "name": "pullwatch",
   "version": "1.0.0",
+  "type": "module",
   "description": "Script para monitorar pull requests em repositórios do GitHub",
   "main": "monitor.js",
   "scripts": {
