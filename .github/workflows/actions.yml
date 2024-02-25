@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: '0 */1 * * *'
 
+env:
+  EMAIL_USER: ${{ secrets.EMAIL_USER }}
+  EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+  EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+  EMAIL_TO: ${{ secrets.EMAIL_TO }}
+
 jobs:
   monitor-repositories:
     runs-on: ubuntu-latest
@@ -28,12 +34,3 @@ jobs:
         with:
           name: logs
           path: logs.txt
-      
-      - name: Send email
-        run: |
-          node src/sendEmail.js
-        env:
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
