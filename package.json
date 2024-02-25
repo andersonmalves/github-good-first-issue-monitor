@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/andersonmalves/pullwatch#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
