@@ -5,8 +5,6 @@
     <h1 align="center">GitHub Good First Issue Monitor</h1>
 </p>
 
----
-
 Este é um projeto simples desenvolvido em Node.js que monitora repositórios do GitHub em busca de issues marcadas como "good-first-issue". O objetivo deste projeto é estudar e aprender sobre o uso das GitHub Actions.
 
 ### Funcionalidades
