@@ -56,8 +56,8 @@ Para que o envio de e-mails seja realizado com sucesso, você precisa configurar
    - Acesse as configurações do seu repositório no GitHub.
    - Navegue até a seção "Secrets" ou "Segredos" nas configurações do repositório.
    - Adicione os seguintes secrets:
-     - `SMTP_USER`: Seu endereço de e-mail.
-     - `SMTP_PASS`: A senha de aplicativo que você criou para o seu e-mail.
+     - `EMAIL_USER`: Seu endereço de e-mail.
+     - `EMAIL_PASS`: A senha de aplicativo que você criou para o seu e-mail.
 
 Após configurar os secrets, o GitHub Actions poderá acessar essas credenciais de forma segura para enviar e-mails durante a execução do workflow.
 
