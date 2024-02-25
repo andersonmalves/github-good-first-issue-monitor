@@ -44,9 +44,24 @@ const repositories = [
 ];
 ```
 
-Você precisa criar uma senha aplicativo e configurar os secrets para enviar os emails. Mais informações:
-- https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email
-- https://docs.github.com/pt/actions/security-guides/using-secrets-in-github-actions
+### Configuração para envio de e-mails
+
+Para que o envio de e-mails seja realizado com sucesso, você precisa configurar as credenciais necessárias como secrets em seu repositório do GitHub. Siga estas etapas:
+
+1. **Crie uma senha de aplicativo para seu e-mail:**
+   - Siga as instruções do provedor de e-mail para criar uma senha de aplicativo. Aqui estão algumas instruções para alguns provedores comuns:
+     - [Gmail](https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email)
+
+2. **Configure os secrets no repositório GitHub:**
+   - Acesse as configurações do seu repositório no GitHub.
+   - Navegue até a seção "Secrets" ou "Segredos" nas configurações do repositório.
+   - Adicione os seguintes secrets:
+     - `SMTP_USER`: Seu endereço de e-mail.
+     - `SMTP_PASS`: A senha de aplicativo que você criou para o seu e-mail.
+
+Após configurar os secrets, o GitHub Actions poderá acessar essas credenciais de forma segura para enviar e-mails durante a execução do workflow.
+
+Para obter mais informações sobre o uso de secrets no GitHub Actions, consulte a [documentação oficial](https://docs.github.com/pt/actions/security-guides/using-secrets-in-github-actions).
 
 ### Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue se encontrar algum problema ou tiver alguma sugestão de melhoria.
