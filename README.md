@@ -26,7 +26,7 @@ npm install
 3. Execute o monitor:
 
 ```bash
-node monitor.js
+node src/index.js
 ```
 
 O monitor irá verificar os repositórios configurados e exibirá as novas issues marcadas como "good-first-issue", se houver.
