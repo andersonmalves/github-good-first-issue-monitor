@@ -3,7 +3,7 @@ name: run monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 */12 * * *'
 
 env:
   EMAIL_USER: ${{ secrets.EMAIL_USER }}
